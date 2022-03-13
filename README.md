@@ -1,4 +1,4 @@
-# tfmod_vpc_igw
+# terraform_vpc_igw
 
 Terraform module to create VPC internet gateway in AWS
 
@@ -11,7 +11,7 @@ variable "vpc_igw_example" { default = "example" }
 
 ## Dependency
 
-VPC <https://github.com/virsas/tfmod_vpc>
+VPC <https://github.com/virsas/terraform_vpc>
 
 ## Terraform example
 
@@ -25,7 +25,7 @@ variable "vpc_igw_default" { default = "DefaultGW" }
 # VPC internet gateway
 ######################
 module "vpc_igw" {
-  source = "github.com/virsas/tfmod_vpc_igw"
+  source = "github.com/virsas/terraform_vpc_igw"
   vpc    = module.vpc_main.id
   name   = var.vpc_igw_default
 }
