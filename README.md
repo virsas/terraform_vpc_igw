@@ -25,7 +25,7 @@ variable "vpc_igw_default" { default = "DefaultGW" }
 # VPC internet gateway
 ######################
 module "vpc_igw" {
-  source = "github.com/virsas/terraform_vpc_igw"
+  source = "git::https://github.com/virsas/terraform_vpc_igw.git?ref=v1.0.0"
   vpc    = module.vpc_main.id
   name   = var.vpc_igw_default
 }
